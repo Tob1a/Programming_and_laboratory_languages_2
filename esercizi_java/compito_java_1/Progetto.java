@@ -8,7 +8,7 @@ public abstract class Progetto {
 
 	
 	public Progetto(int cod, String t, String c, String o, double i){
-    codice=cod;
+    	codice=cod;
 		titolo = t;
 		coord = c;
 		org=o;

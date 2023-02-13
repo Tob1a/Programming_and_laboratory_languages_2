@@ -84,7 +84,7 @@ public class Gestione {
         // PUNTO 3: stampa di tutti i progetti
         System.out.println(
                 "tipo, titolo, codice, coordinatore, organizzazione, argomento, partner, aziende, importo totale in migliaia di euro");
-        for (Progetto p : progetti)
+        for (Progetto p : progetti) //per ogni p di tipo progetto presente nella lista progetti
             System.out.println(p);
         System.out.println();
         // PUNTO 4: stampa ricercatori
