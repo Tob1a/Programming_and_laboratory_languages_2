@@ -10,7 +10,7 @@ public  class Impegno {
 		impegno = i;
 	}
   public double getOre()
- {
+	{
         return impegno;
 	}		
 	public Progetto getProg()
