@@ -14,4 +14,5 @@ public class Noleggio{
     }
     public String toString() {
         return  "("+v.getTarga()+","+noleggio+")";
+    }
 }
