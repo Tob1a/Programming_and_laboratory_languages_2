@@ -1,6 +1,7 @@
-public class Noleggio{
+public class Noleggio {
     protected Veicolo v;
     protected int noleggio;
+
     public Noleggio(Veicolo v, int noleggio) {
         this.v = v;
         this.noleggio = noleggio;
@@ -9,10 +10,12 @@ public class Noleggio{
     public Veicolo getVeicolo() {
         return v;
     }
+
     public int getNoleggio() {
         return noleggio;
     }
+
     public String toString() {
-        return  "("+v.getTarga()+","+noleggio+")";
+        return "(" + v.getTarga() + "," + noleggio + ")";
     }
 }
