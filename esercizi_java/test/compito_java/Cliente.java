@@ -36,4 +36,8 @@ public class Cliente{
         return total;
     }
 
+    public String toString(){
+        return "Nome: "+nome+"\nCognome: "+cognome+"\nTotale:" + getTotal();
+    }
+
 }
