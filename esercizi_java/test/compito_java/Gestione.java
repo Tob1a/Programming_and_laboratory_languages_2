@@ -1,12 +1,18 @@
-import java.util.*;
-import java.io.*;
+import java.util.List;
+import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Gestione {
     static List<Veicolo> veicoli = new LinkedList<Veicolo>();
     static List<Cliente> clienti = new LinkedList<Cliente>();
     static Map<Integer, Veicolo> codProg = new HashMap<Integer, Veicolo>();
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         // punto 1
         try {
             BufferedReader br = new BufferedReader(new FileReader("veicoli.txt"));
@@ -82,6 +88,19 @@ public class Gestione {
             System.err.println(e);
         }
         // punto 3
+        System.out.println(
+                "tipo, targa, codice, modello, marca, costo giornaliero, cilindrata, bagagliaio, categoria, numero di posti, vano di carico");
+        for (Veicolo v : veicoli) {
+            System.out.println(v);
+        }
+        System.out.println();
+
+        // punto 4
+        for (Cliente c : clienti) {
+            System.out.println(c);
+        }
+
+        // punto 5
 
     }
 }
