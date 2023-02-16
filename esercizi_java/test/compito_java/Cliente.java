@@ -1,7 +1,9 @@
 import java.util.List;
+import java.util.LinkedList;
 
 public class Cliente {
-    private String nome, cognome;
+    private String nome;
+    private String cognome;
     private List<Noleggio> veicolo;
 
     public Cliente(String nome, String cognome) {
@@ -19,7 +21,7 @@ public class Cliente {
     }
 
     public void addVeic(Veicolo v, int giorni) {
-        veicolo.add(new Furgone(v, giorni));
+        veicolo.add(new Noleggio(v, giorni));
     }
 
     /*

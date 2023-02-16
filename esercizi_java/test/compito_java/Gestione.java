@@ -4,9 +4,9 @@ import java.io.*;
 public class Gestione {
     static List<Veicolo> veicoli = new LinkedList<Veicolo>();
     static List<Cliente> clienti = new LinkedList<Cliente>();
-    static Map<Integer, Veicolo> codProg = new HashMap<Integer, Veicolo>;
+    static Map<Integer, Veicolo> codProg = new HashMap<Integer, Veicolo>();
 
-    public static Void Main(String[] args) {
+    public static void Main(String[] args) {
         // punto 1
         try {
             BufferedReader br = new BufferedReader(new FileReader("veicoli.txt"));
@@ -28,7 +28,7 @@ public class Gestione {
                     int cilindrata = Integer.parseInt(tok.nextToken());
                     double capienza = Double.parseDouble(tok.nextToken());
                     line = br.readLine();
-                    double costo = Double.parseDouble(tok.nextToken());
+                    double costo = Double.parseDouble(line);
 
                     Auto a = new Auto(cod, targa, modello, marca, costo, cilindrata, capienza);
                     veicoli.add(a);
@@ -38,9 +38,9 @@ public class Gestione {
                     line = br.readLine();
                     tok = new StringTokenizer(line);
                     int posti = Integer.parseInt(tok.nextToken());
-                    boolean vano = Boolean.parseBoolean(tok.nextToken())
+                    boolean vano = Boolean.parseBoolean(tok.nextToken());
                     line = br.readLine();
-                    double costo = Double.parseDouble(tok.nextToken());
+                    double costo = Double.parseDouble(line);
 
                     Furgone f = new Furgone(cod, targa, modello, marca, costo, categoria, posti, vano);
                     veicoli.add(f);
@@ -49,7 +49,7 @@ public class Gestione {
                 line = br.readLine();
             }
             br.close();
-        } catch (Ioexpection e) {
+        } catch (IOException e) {
             System.err.println(e);
         } catch (Exception e) {
             System.err.println(e);
@@ -76,7 +76,7 @@ public class Gestione {
                 line = br.readLine();
             }
             br.close();
-        } catch (Ioexpection e) {
+        } catch (IOException e) {
             System.err.println(e);
         } catch (Exception e) {
             System.err.println(e);
