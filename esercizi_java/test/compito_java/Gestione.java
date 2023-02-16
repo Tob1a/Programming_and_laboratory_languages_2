@@ -64,7 +64,6 @@ public class Gestione {
         try {
             BufferedReader br = new BufferedReader(new FileReader("clienti.txt"));
             String line = br.readLine();
-            line = br.readLine();
             while (line != null) {
                 StringTokenizer tok = new StringTokenizer(line);
                 String nome = tok.nextToken();
