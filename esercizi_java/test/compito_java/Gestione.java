@@ -27,8 +27,10 @@ public class Gestione {
                     tok = new StringTokenizer(line);
                     int cilindrata = Integer.parseInt(tok.nextToken());
                     double capienza = Double.parseDouble(tok.nextToken());
+                    line = br.readLine();
+                    double costo = Double.parseDouble(tok.nextToken());
 
-                    Auto a = new Auto(cod, targa, modello, marca, cilindrata, capienza);
+                    Auto a = new Auto(cod, targa, modello, marca, costo, cilindrata, capienza);
                     veicoli.add(a);
                     codProg.put(cod, a);
                 } else {
@@ -36,9 +38,11 @@ public class Gestione {
                     line = br.readLine();
                     tok = new StringTokenizer(line);
                     int posti = Integer.parseInt(tok.nextToken());
-                    boolean vano = Boolean.parseBoolean(tok.nextToken());
+                    boolean vano = Boolean.parseBoolean(tok.nextToken())
+                    line = br.readLine();
+                    double costo = Double.parseDouble(tok.nextToken());
 
-                    Furgone f = new Furgone(cod, targa, modello, marca, categoria, posti, vano);
+                    Furgone f = new Furgone(cod, targa, modello, marca, costo, categoria, posti, vano);
                     veicoli.add(f);
                     codProg.put(cod, f);
                 }
@@ -63,7 +67,7 @@ public class Gestione {
                 clienti.add(c);
                 line = br.readLine();
                 while (line != null) {
-                    StringTokenizer tok = new StringTokenizer(line);
+                    tok = new StringTokenizer(line);
                     int cod = Integer.parseInt(tok.nextToken());
                     int giorni = Integer.parseInt(tok.nextToken());
                     c.addVeic(codProg.get(cod), giorni);
