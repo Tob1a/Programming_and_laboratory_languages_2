@@ -8,7 +8,8 @@ public class Auto extends Veicolo {
         this.capienza = capienza;
     }
 
+    @Override
     public String toString() {
-        return "automobile" + super.toString() + "-\t" + "-\t" + cilindrata + "\t" + capienza;
+        return "automobile\t" + super.toString() + "\t-\t" + "-\t" + cilindrata + "\t" + capienza;
     }
 }

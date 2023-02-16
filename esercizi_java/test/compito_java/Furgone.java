@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Furgone extends Veicolo {
     private int posti;
     private boolean vano;
@@ -14,7 +12,8 @@ public class Furgone extends Veicolo {
 
     }
 
+    @Override
     public String toString() {
-        return "Furgone\t" + super.toString() + "\t" + categoria + "\t" + posti + "\t" + vano;
+        return "commerciale\t" + super.toString() + "\t-\t" + "-\t" + categoria + "\t" + vano;
     }
 }

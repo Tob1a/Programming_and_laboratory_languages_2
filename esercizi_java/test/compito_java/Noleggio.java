@@ -1,10 +1,10 @@
 public class Noleggio {
     protected Veicolo v;
-    protected int noleggio;
+    protected int n;
 
     public Noleggio(Veicolo v, int noleggio) {
         this.v = v;
-        this.noleggio = noleggio;
+        this.n = noleggio;
     }
 
     public Veicolo getVeicolo() {
@@ -12,10 +12,10 @@ public class Noleggio {
     }
 
     public int getNoleggio() {
-        return noleggio;
+        return n;
     }
 
     public String toString() {
-        return "(" + v.getTarga() + "," + noleggio + ")";
+        return "(" + v.getTarga() + "," + n + ")";
     }
 }
