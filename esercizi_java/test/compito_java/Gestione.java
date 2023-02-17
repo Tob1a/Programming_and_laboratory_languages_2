@@ -99,6 +99,13 @@ public class Gestione {
         }
 
         // punto 5
-
+        System.out.println();
+        // int num = Integer.parseInt(args[0]);
+        int num = 5;
+        double ciao = 0;
+        for (Cliente v : clienti) {
+            ciao = v.getMassimoveicolo(num) + ciao;
+        }
+        System.out.println(ciao);
     }
 }

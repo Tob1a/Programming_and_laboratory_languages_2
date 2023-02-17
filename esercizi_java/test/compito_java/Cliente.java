@@ -45,6 +45,18 @@ public class Cliente {
         return total;
     }
 
+    public double getMassimoveicolo(int num) {
+        double massimo = 0;
+        int ciaonenenen = 0;
+        for (Noleggio n : veicolo) {
+            ciaonenenen = n.getCodice();
+            if (ciaonenenen == num) {
+                massimo = n.getNoleggio() * n.getCost() + massimo;
+            }
+        }
+        return massimo;
+    }
+
     public String toString() {
         return nome + "\t" + cognome + "\t" + getTotal() + "\t{" + veicolo.toString() + "}";
     }
