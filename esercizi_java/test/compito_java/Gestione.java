@@ -71,12 +71,11 @@ public class Gestione {
                 Cliente c = new Cliente(nome, cognome);
                 clienti.add(c);
                 line = br.readLine();
-                while (line != null) {
-                    tok = new StringTokenizer(line);
+                tok = new StringTokenizer(line);
+                while (tok.hasMoreTokens()) {
                     int cod = Integer.parseInt(tok.nextToken());
                     int giorni = Integer.parseInt(tok.nextToken());
                     c.addVeic(codProg.get(cod), giorni);
-                    line = br.readLine();
                 }
                 line = br.readLine();
             }

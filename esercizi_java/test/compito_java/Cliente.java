@@ -40,13 +40,13 @@ public class Cliente {
     public double getTotal() {
         double total = 0;
         for (Noleggio i : veicolo) {
-            total = i.getNoleggio() + total;
+            total = i.getNoleggio() * i.getCost() + total;
         }
         return total;
     }
 
     public String toString() {
-        return nome + "\t" + cognome + "\n" + getTotal();
+        return nome + "\t" + cognome + "\t" + getTotal() + "\t{" + veicolo.toString() + "}";
     }
 
 }

@@ -15,6 +15,10 @@ public class Noleggio {
         return n;
     }
 
+    public double getCost() {
+        return v.cost;
+    }
+
     public String toString() {
         return "(" + v.getTarga() + "," + n + ")";
     }
