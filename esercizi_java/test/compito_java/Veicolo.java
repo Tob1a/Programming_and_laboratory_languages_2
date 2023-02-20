@@ -19,14 +19,6 @@ public abstract class Veicolo {
         return targa;
     }
 
-    public String getModello() {
-        return modello;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
     public double getCost() {
         return cost;
     }

@@ -49,7 +49,7 @@ public class Gestione {
                     double costo = Double.parseDouble(line);
 
                     Furgone f = new Furgone(cod, targa, modello, marca, costo, categoria, posti, vano);
-                    veicoli.add(f);
+                    veicoEli.add(f);
                     codProg.put(cod, f);
                 }
                 line = br.readLine();
