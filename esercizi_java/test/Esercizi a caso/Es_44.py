@@ -10,20 +10,18 @@ dict_one = {
     'Vince Vega': 'Pulp Fiction'
 }
 print(dict_one)
-dict_two = {}
-dict_three = {}
-x = dict_one.keys()
-for z in range(0, len(dict_one), -1):
-    dict_two[z].update(dict_one[y])
 
-print(len(dict_one))
+# punto 1
+dict_two = {}
+for z in range(len(dict_one)-1, -1, -1):
+    dict_two[z] = dict_one[list(dict_one.keys())[z]]
+
 print(dict_two)
 
 # punto 2
-
+dict_three = {}
 for z, y in dict_one.items():
-    if y not in dict_three:
-        dict_three[y].update(dict_one[y])
-        dict_three[z] = + ', ' + dict_one[z]
+    dict_three.setdefault(y, [])
+    dict_three[y].append(z)
 
 print(dict_three)
