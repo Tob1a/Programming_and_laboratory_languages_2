@@ -14,6 +14,7 @@ print(dict_one)
 # punto 1
 dict_two = {}
 for z in range(len(dict_one)-1, -1, -1):
+    # praticamente mette in una lista le chiavi del dizionario dict_one
     dict_two[z] = dict_one[list(dict_one.keys())[z]]
 
 print(dict_two)
@@ -23,5 +24,6 @@ dict_three = {}
 for z, y in dict_one.items():
     dict_three.setdefault(y, [])
     dict_three[y].append(z)
+
 
 print(dict_three)
